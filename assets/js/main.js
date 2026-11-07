@@ -270,3 +270,26 @@ document.addEventListener('DOMContentLoaded', () => {
   setLanguage(currentLang);
   highlightActiveSection();
 });
+
+
+/*===== POLISH: scroll progress, header shadow, reveal on scroll =====*/
+(() => {
+  const bar = document.createElement('div');
+  bar.className = 'scroll-progress';
+  document.body.prepend(bar);
+  const header = document.getElementById('header');
+  const onScroll = () => {
+    const h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + '%';
+    header && header.classList.toggle('scrolled', scrollY > 20);
+  };
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  const targets = document.querySelectorAll('.section-header, .metric-card, .skill-pillar-card, .timeline-item, .project-card, .cert-card, .contact-card, .about-grid');
+  if (!('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver((es) => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: 0.12 });
+  targets.forEach(t => { t.classList.add('reveal'); io.observe(t); });
+})();
