@@ -1,205 +1,639 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hieu Minh Vu - Fullstack Software Engineer (.NET 8, Flutter, React MFE, AWS IoT Core & Tuya Smart Home). Enterprise Developer Portfolio.">
+    <meta name="author" content="Vu Minh Hieu">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Hieu Minh Vu | Fullstack Software Engineer (.NET & Flutter)">
+    <meta property="og:description" content="3+ years building Enterprise Backend (.NET 8, Microservices, BFF), Cross-platform (Flutter), and Dual Smart Home IoT Ecosystems (AWS & Tuya).">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/perfil.png">
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Boxicons -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-        <title>Portfolio website</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Hieu Minh Vu</a>
-                </div>
+    <title>Hieu Minh Vu | Fullstack Software Engineer (.NET & Flutter)</title>
+</head>
+<body>
+    <!--===== HEADER =====-->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="#home" class="nav-brand">
+                <span>Hieu Minh Vu</span>
+                <span class="nav-brand-badge">Fullstack .NET / Flutter</span>
+            </a>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            <div class="nav-actions">
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#home" class="nav-link active-link" data-i18n="nav_home">Trang chủ</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link" data-i18n="nav_about">Giới thiệu</a></li>
+                        <li class="nav-item"><a href="#skills" class="nav-link" data-i18n="nav_skills">Kỹ năng</a></li>
+                        <li class="nav-item"><a href="#experience" class="nav-link" data-i18n="nav_experience">Kinh nghiệm</a></li>
+                        <li class="nav-item"><a href="#projects" class="nav-link" data-i18n="nav_projects">Dự án</a></li>
+                        <li class="nav-item"><a href="#certifications" class="nav-link" data-i18n="nav_certifications">Chứng chỉ</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link" data-i18n="nav_contact">Liên hệ</a></li>
                     </ul>
                 </div>
 
-                <div class="nav__toggle" id="nav-toggle">
+                <!-- Language Switcher -->
+                <div class="lang-switcher" id="lang-switcher">
+                    <button class="lang-btn active" data-lang="vi" id="btn-lang-vi">VI</button>
+                    <button class="lang-btn" data-lang="en" id="btn-lang-en">EN</button>
+                </div>
+
+                <div class="nav-toggle" id="nav-toggle">
                     <i class='bx bx-menu'></i>
                 </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Hieu Minh Vu</span><br> Back End C#/.Net </h1>
-
-                    <a href="#" class="button">Contact</a>
-                </div>
-
-                <div class="home__social">
-                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
-
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/CV.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
-
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Hieu Minh Vu</h2>
-                        <p class="about__text">I am an enthusiastic C# Backend developer with a strong passion for programming languages ​​and coding. I am constantly learning through real projects, colleagues and always focus on improving my teamwork skills. With the goal of becoming a Senior Developer in 3-5 years, I want to contribute to the community and develop leadership skills..</p>           
-                    </div>                                   
-                </div>
-            </section>
-
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">I have solid OOP skills and am proficient in programming in C#, experienced in using MySQL, SQL Server, Entity Framework and LINQ for data management. I have built applications using frameworks such as WPF, WinForms, ASP.NET and improved the interface with Material Design, DevExpress. In addition, I understand data structures, algorithms, hardware communication (ESP32, Arduino) and use Git to manage source code, always apply MVVM, MVC models to optimize source code.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">C#</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
-
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
-
-                <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
-                </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Contact" class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Vu</p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
-            <p class="footer__copy">&#169; Hieu Minh Vu . All rigths reserved</p>
-        </footer>
+        </nav>
+    </header>
 
+    <main class="main">
+        <!--===== HERO SECTION =====-->
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="status-dot"></span>
+                        <span data-i18n="hero_badge">Sẵn sàng cho cơ hội Fullstack / .NET / Flutter / IoT</span>
+                    </div>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+                    <h1 class="hero-title">
+                        <span data-i18n="hero_greeting">Xin chào, tôi là</span> <br>
+                        <span class="highlight">Vũ Minh Hiếu</span>
+                    </h1>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">
+                        Kỹ sư Phần mềm Fullstack với hơn 3 năm kinh nghiệm phát triển hệ thống Backend hiệu năng cao (.NET 8, Microservices, BFF Gateway), Ứng dụng Đa nền tảng (Flutter, React MFE, WPF) và Vận hành Hệ sinh thái IoT Smart Home 2 nền tảng song song (AWS IoT Core & Tuya SDK) tại Sunhouse Group và Brother Vietnam.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class='bx bx-briefcase-alt-2'></i>
+                            <span data-i18n="btn_explore_projects">Khám phá Dự án</span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class='bx bx-envelope'></i>
+                            <span data-i18n="btn_contact_me">Liên hệ ngay</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/hieuvm688/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://github.com/hieuvm688" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="mailto:hieuvm.bo.01@gmail.com" class="social-link" title="Send Email">
+                            <i class='bx bx-envelope'></i>
+                        </a>
+                        <a href="tel:0356239688" class="social-link" title="Call Me">
+                            <i class='bx bx-phone'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-avatar-card">
+                        <img src="assets/img/CV.png" alt="Vu Minh Hieu - Fullstack Developer" onerror="this.onerror=null; this.src='assets/img/perfil.png';">
+                    </div>
+                    <div class="hero-float-badge">
+                        <i class='bx bx-layer'></i>
+                        <div>
+                            <div class="badge-title" data-i18n="hero_float_title">Kiến trúc hệ thống</div>
+                            <div class="badge-val">Clean Arch & Cloud IoT</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== KEY METRICS =====-->
+        <section class="section-metrics">
+            <div class="container">
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">3+</div>
+                        <div class="metric-label" data-i18n="metric_exp">Năm Kinh Nghiệm Thực Chiến</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">2</div>
+                        <div class="metric-label" data-i18n="metric_iot">Nền Tảng IoT Cloud (AWS & Tuya)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">4+</div>
+                        <div class="metric-label" data-i18n="metric_systems">Hệ Thống Doanh Nghiệp & Super App</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">A+</div>
+                        <div class="metric-label" data-i18n="metric_award">Nhân Viên Tiêu Biểu (Brother VN)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="tag_about">Hồ sơ năng lực</span>
+                    <h2 class="section-title" data-i18n="about_title">Về Bản Thân</h2>
+                    <p class="section-description" data-i18n="about_desc">
+                        Tư duy hệ thống, tập trung vào tính ổn định, bảo mật, khả năng mở rộng quy mô và tạo ra giá trị kinh doanh lâu dài.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-img-box">
+                        <img src="assets/img/about.jpg" alt="Vu Minh Hieu workspace">
+                    </div>
+
+                    <div class="about-content">
+                        <p class="about-text" data-i18n="about_p1">
+                            Tôi là Kỹ sư Phần mềm Fullstack tốt nghiệp ngành Kỹ thuật Phần mềm tại Đại học Công Nghiệp Hà Nội (HaUI). Với nền tảng kỹ thuật vững chắc và tư duy kiến trúc hệ thống chuẩn mực, tôi đã tham gia trực tiếp vào việc thiết kế kiến trúc và phát triển các sản phẩm công nghệ trọng yếu tại <strong>Tập đoàn SUNHOUSE</strong> và <strong>Brother Industrial Vietnam</strong>.
+                        </p>
+                        <p class="about-text" data-i18n="about_p2">
+                            Thế mạnh cốt lõi của tôi bao gồm: Thiết kế hệ thống Backend .NET 8 theo Clean Architecture và Microservices (BFF Gateway YARP, Redis Cache, CQRS MediatR); Xây dựng ứng dụng Đa nền tảng Flutter (Clean Architecture + Riverpod 2.x, Custom 2D Canvas rendering); Viết cầu nối Native (Kotlin, Swift, Objective-C); Tích hợp song song 2 hệ sinh thái Smart Home IoT (AWS IoT Core MQTT + ESP32 BLE và Tuya SmartLife SDK / Sweeper P2P Map); cùng năng lực Tối ưu hóa hiệu năng cơ sở dữ liệu chuyên sâu (SQL Tuning, Indexing, Execution Plan).
+                        </p>
+
+                        <div class="about-highlights">
+                            <div class="about-item">
+                                <i class='bx bx-check-shield'></i>
+                                <div class="about-item-text">
+                                    <h4 data-i18n="about_h1_title">Chuẩn Mực & Bền Vững</h4>
+                                    <p data-i18n="about_h1_desc">Áp dụng triệt để SOLID, Clean Architecture, Feature-first và Clean Code.</p>
+                                </div>
+                            </div>
+                            <div class="about-item">
+                                <i class='bx bx-chip'></i>
+                                <div class="about-item-text">
+                                    <h4 data-i18n="about_h2_title">IoT & Real-time</h4>
+                                    <p data-i18n="about_h2_desc">Làm chủ kết nối phần cứng ESP32 BLE, AWS IoT MQTT SigV4 và SDK Tuya.</p>
+                                </div>
+                            </div>
+                            <div class="about-item">
+                                <i class='bx bx-data'></i>
+                                <div class="about-item-text">
+                                    <h4 data-i18n="about_h3_title">Tối Ưu Hiệu Năng CSDL</h4>
+                                    <p data-i18n="about_h3_desc">Chứng chỉ chuyên sâu SQL Tuning, tối ưu Stored Procedures và Indexing.</p>
+                                </div>
+                            </div>
+                            <div class="about-item">
+                                <i class='bx bx-bulb'></i>
+                                <div class="about-item-text">
+                                    <h4 data-i18n="about_h4_title">Văn Hóa Chuyên Nghiệp</h4>
+                                    <p data-i18n="about_h4_desc">Kinh nghiệm làm việc chuẩn Horenso, Kaizen từ môi trường doanh nghiệp Nhật Bản.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== SKILLS MATRIX =====-->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="tag_skills">Năng lực cốt lõi</span>
+                    <h2 class="section-title" data-i18n="skills_title">Ma Trận Kỹ Năng Kỹ Thuật</h2>
+                    <p class="section-description" data-i18n="skills_desc">
+                        Hệ thống kỹ năng được cấu trúc theo 4 trụ cột kỹ thuật chuẩn Enterprise Mobile & Backend Architect.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Pillar 1 -->
+                    <div class="skill-pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon-box"><i class='bx bx-server'></i></div>
+                            <h3 class="pillar-title" data-i18n="pillar1_title">Backend, Microservices & Architecture</h3>
+                        </div>
+                        <p class="pillar-desc" data-i18n="pillar1_desc">
+                            Thiết kế Backend API hiệu năng cao, cơ chế phân tán, API Gateway BFF, xử lý luồng dữ liệu realtime và tuân thủ các nguyên lý kiến trúc hướng đối tượng.
+                        </p>
+                        <div class="pillar-tags">
+                            <span class="tech-tag">C# (.NET 6/7/8)</span>
+                            <span class="tech-tag">ASP.NET Core Web API</span>
+                            <span class="tech-tag">BFF Gateway (YARP)</span>
+                            <span class="tech-tag">CQRS (MediatR)</span>
+                            <span class="tech-tag">gRPC & SignalR</span>
+                            <span class="tech-tag">Dapper & EF Core</span>
+                            <span class="tech-tag">Redis Distributed Cache</span>
+                            <span class="tech-tag">Clean Architecture</span>
+                            <span class="tech-tag">SOLID & DI</span>
+                            <span class="tech-tag">MinIO S3</span>
+                            <span class="tech-tag">OpenTelemetry</span>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="skill-pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon-box"><i class='bx bx-mobile-alt'></i></div>
+                            <h3 class="pillar-title" data-i18n="pillar2_title">Mobile (Flutter), Native Bridge & Frontend</h3>
+                        </div>
+                        <p class="pillar-desc" data-i18n="pillar2_desc">
+                            Phát triển Super App đa nền tảng Flutter (iOS/Android/Desktop), viết cầu nối Native Platform Channels và xây dựng kiến trúc Web Micro-frontends.
+                        </p>
+                        <div class="pillar-tags">
+                            <span class="tech-tag">Flutter (Dart 3.x)</span>
+                            <span class="tech-tag">Riverpod 2.x</span>
+                            <span class="tech-tag">Feature-first Modular</span>
+                            <span class="tech-tag">Custom 2D Canvas</span>
+                            <span class="tech-tag">Kotlin (MethodChannel)</span>
+                            <span class="tech-tag">Swift / Obj-C</span>
+                            <span class="tech-tag">React 18+ (Vite MFE)</span>
+                            <span class="tech-tag">Module Federation</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">WPF (MVVM, XAML)</span>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="skill-pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon-box"><i class='bx bx-wifi'></i></div>
+                            <h3 class="pillar-title" data-i18n="pillar3_title">Smart Home IoT, Cloud & Firmware</h3>
+                        </div>
+                        <p class="pillar-desc" data-i18n="pillar3_desc">
+                            Vận hành song song 2 giải pháp Smart Home IoT: AWS IoT Core MQTT kết nối vi điều khiển ESP32 và tích hợp Tuya SmartLife SDK / Sweeper P2P SDK.
+                        </p>
+                        <div class="pillar-tags">
+                            <span class="tech-tag">AWS IoT Core MQTT (SigV4)</span>
+                            <span class="tech-tag">AWS Cognito / STS</span>
+                            <span class="tech-tag">ESP32 BLE Provisioning</span>
+                            <span class="tech-tag">Protocomm Sec1 (ECDH/AES)</span>
+                            <span class="tech-tag">AWS IoT Jobs (OTA)</span>
+                            <span class="tech-tag">Tuya SmartLife SDK</span>
+                            <span class="tech-tag">Tuya Sweeper SDK P2P (LZ4)</span>
+                            <span class="tech-tag">Tuya Cloud (HMAC-SHA256)</span>
+                            <span class="tech-tag">Optimistic UI & ACK</span>
+                            <span class="tech-tag">NLP Voice Control</span>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 4 -->
+                    <div class="skill-pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon-box"><i class='bx bx-data'></i></div>
+                            <h3 class="pillar-title" data-i18n="pillar4_title">Database, DevOps & Quality Standards</h3>
+                        </div>
+                        <p class="pillar-desc" data-i18n="pillar4_desc">
+                            Tối ưu hóa hiệu năng truy vấn CSDL chuyên sâu, thiết kế cấu trúc dữ liệu quy mô lớn, xây dựng luồng tự động hóa CI/CD và quy trình chất lượng chuẩn quốc tế.
+                        </p>
+                        <div class="pillar-tags">
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">SQL Server Performance Tuning</span>
+                            <span class="tech-tag">Index Optimization</span>
+                            <span class="tech-tag">Execution Plan Analysis</span>
+                            <span class="tech-tag">Stored Procedures Tuning</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">CI/CD & Git Flow</span>
+                            <span class="tech-tag">Firebase (FCM/Crashlytics)</span>
+                            <span class="tech-tag">Agile / Scrum</span>
+                            <span class="tech-tag">Horenso & Kaizen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== WORK EXPERIENCE =====-->
+        <section class="section" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="tag_exp">Hành trình nghề nghiệp</span>
+                    <h2 class="section-title" data-i18n="exp_title">Kinh Nghiệm Làm Việc</h2>
+                    <p class="section-description" data-i18n="exp_desc">
+                        Kinh nghiệm thực chiến tại các tập đoàn sản xuất và công nghệ hàng đầu.
+                    </p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Job 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role" data-i18n="job1_role">Fullstack Developer (.NET & Flutter)</h3>
+                                    <div class="timeline-company" data-i18n="job1_company">Công ty Công nghệ và Ứng dụng Sunhouse (Sunhouse Group JSC)</div>
+                                </div>
+                                <span class="timeline-period" data-i18n="job1_period">10/2025 - Hiện tại</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li data-i18n="job1_b1">
+                                    Phát triển hệ sinh thái Super App eSunhouse V2 (Flutter iOS/Android, cấu trúc feature modules theo Clean Architecture + Riverpod 2.x), hệ thống Backend API (.NET 8, Dapper, PostgreSQL/SQL Server, Redis) và Web Micro-frontends (Shell App / CRM MFE theo Module Federation).
+                                </li>
+                                <li data-i18n="job1_b2">
+                                    <strong>Kiến trúc AWS IoT Core & ESP32:</strong> Triển khai BLE Provisioning (Protocomm Security 1, ECDH Curve25519, AES-CTR); xây dựng kênh điều khiển realtime qua AWS IoT Core MQTT (SigV4 WebSocket, AWS Cognito/STS) kết hợp SignalR Hub, cơ chế Optimistic UI + DebounceState + ACK correlation chống nháy giao diện, TCP Network Guard và điều khiển giọng nói Tiếng Việt (NLP Voice Control).
+                                </li>
+                                <li data-i18n="job1_b3">
+                                    <strong>Tích hợp Tuya SDK, Sweeper P2P & Tuya Cloud song song AWS:</strong> Xây dựng cầu nối Native (Kotlin, Swift, Objective-C) tích hợp Tuya SmartLife App SDK & Tuya Cloud để ghép nối, điều khiển thiết bị theo DP Schema, quản lý kịch bản (Scene SDK) và chia sẻ thiết bị; thiết kế luồng cấp phát Tuya Credential (HMAC-SHA256) từ Backend và giải mã luồng P2P Binary/LZ4 (Sweeper SDK) để vẽ bản đồ Robot Laser 2D realtime trên Flutter bằng Custom Canvas.
+                                </li>
+                                <li data-i18n="job1_b4">
+                                    <strong>Phát triển nghiệp vụ e-Warranty, DMS & Loyalty:</strong> Xây dựng phân hệ kích hoạt/tra cứu bảo hành điện tử, nhập kho đại lý (DMS), tích xu đổi quà Sunhouse Xu (Idempotency, Contextual Palette phân hạng thành viên), Banner sự kiện động và tích hợp Firebase FCM, Zalo ZNS, MinIO.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role" data-i18n="job2_role">Software Engineer (.NET & Cross-platform)</h3>
+                                    <div class="timeline-company" data-i18n="job2_company">Brother Industrial Vietnam</div>
+                                </div>
+                                <span class="timeline-period" data-i18n="job2_period">11/2023 - 10/2025</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li data-i18n="job2_b1">
+                                    Thiết kế kiến trúc và phát triển toàn diện (Fullstack) các hệ thống phần mềm quản lý nội bộ, tự động hóa quy trình nghiệp vụ, thúc đẩy chuyển đổi số (DX) và cắt giảm chi phí vận hành cho các phòng ban nhà máy.
+                                </li>
+                                <li data-i18n="job2_b2">
+                                    Xây dựng các module thư viện lõi dùng chung (Core Shared Libraries) giúp chuẩn hóa kiến trúc, tăng tốc độ phân phối tính năng và đảm bảo hoàn thành xuất sắc KPI bộ phận.
+                                </li>
+                                <li data-i18n="job2_b3">
+                                    <strong>Tối ưu hóa hiệu năng CSDL (SQL Performance Tuning):</strong> Tái cấu trúc truy vấn phức tạp, thiết kế chiến lược Indexing tối ưu và tinh chỉnh Stored Procedures, giúp tăng tốc độ xử lý và cắt giảm lãng phí tài nguyên máy chủ cho các hệ thống trọng yếu đang vận hành.
+                                </li>
+                                <li data-i18n="job2_b4">
+                                    Trực tiếp xử lý sự cố (Troubleshooting), bảo trì và nâng cấp các hệ thống phần mềm trọng yếu tại nhà máy Việt Nam và chi nhánh quốc tế (Nhật Bản, Hong Kong). Đạt giải thưởng <strong>Nhân viên tiêu biểu năm - Xếp loại A+</strong> trong kỳ đánh giá nhân sự (12/2024).
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== FEATURED PROJECTS =====-->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="tag_projects">Sản phẩm thực tế</span>
+                    <h2 class="section-title" data-i18n="projects_title">Dự Án Trọng Điểm</h2>
+                    <p class="section-description" data-i18n="projects_desc">
+                        Các case study thực tế từ kiến trúc đa nền tảng, hệ thống IoT công nghiệp đến giải pháp số hóa quy trình doanh nghiệp.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 01 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/img/work1.jpg" alt="eSunhouse V2 Super App">
+                            <span class="project-badge-top">Enterprise Super App & IoT</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-company">Tập đoàn SUNHOUSE (10/2025 - Hiện tại)</div>
+                            <h3 class="project-title" data-i18n="p1_title">Hệ Sinh Thái Super App, Smart Home IoT & Bảo Hành Điện Tử (eSunhouse V2)</h3>
+                            <p class="project-desc" data-i18n="p1_desc">
+                                Super App đa dịch vụ và nền tảng Backend .NET 8 vận hành song song 2 luồng IoT: (1) AWS IoT Core MQTT SigV4, ESP32 BLE Provisioning (ECDH/AES-CTR), OTA Firmware & Điều khiển giọng nói; (2) Tuya SmartLife SDK, Tuya Cloud Auth HMAC-SHA256, giải mã luồng Sweeper P2P LZ4 dựng bản đồ Robot Laser 2D realtime trên Flutter. Tích hợp e-Warranty, DMS và Loyalty.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flutter (Riverpod 2.x)</span>
+                                <span class="tech-tag">.NET 8 Web API</span>
+                                <span class="tech-tag">Kotlin/Swift Channels</span>
+                                <span class="tech-tag">AWS IoT Core MQTT</span>
+                                <span class="tech-tag">Tuya SDK & Sweeper P2P</span>
+                                <span class="tech-tag">PostgreSQL & Redis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 02 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/img/work2.jpg" alt="Order Management System OMS">
+                            <span class="project-badge-top">Internal Digital Transformation</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-company">Brother Vietnam (01/2025 - 06/2025)</div>
+                            <h3 class="project-title" data-i18n="p2_title">Hệ Thống Quản Lý Đặt Hàng & Phê Duyệt Điện Tử (OMS)</h3>
+                            <p class="project-desc" data-i18n="p2_desc">
+                                Số hóa 100% quy trình đặt hàng và phát hành đơn nội bộ cho Phòng Kỹ thuật Phát triển Brother Vietnam. Thay thế toàn bộ thủ tục giấy tờ thủ công bằng luồng phê duyệt điện tử (e-Approval đa cấp), tích hợp thông báo tự động và phân quyền ma trận, giúp tiết kiệm đáng kể thời gian và chi phí vận hành.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">ASP.NET Core</span>
+                                <span class="tech-tag">C# (.NET 8)</span>
+                                <span class="tech-tag">Dapper & EF Core</span>
+                                <span class="tech-tag">SQL Server</span>
+                                <span class="tech-tag">JavaScript & Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 03 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/img/work3.jpg" alt="Rack Logistics Cross-platform App">
+                            <span class="project-badge-top">Global Logistics App</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-company">Brother Vietnam (12/2024 - 02/2025)</div>
+                            <h3 class="project-title" data-i18n="p3_title">Ứng Dụng Đa Nền Tảng Quản Lý Vận Chuyển Rack Quốc Tế</h3>
+                            <p class="project-desc" data-i18n="p3_desc">
+                                Phát triển ứng dụng Flutter đa nền tảng (iOS, Desktop, Web) cho Bộ phận Xuất nhập khẩu (Logistics). Tích hợp quét mã QR Code siêu nhanh, cơ chế đa ngôn ngữ (i18n) để theo dõi vòng đời các giá đỡ hàng (Rack) trong chuỗi vận chuyển quốc tế. Giải cứu tiến độ và đưa vào triển khai thành công tại chi nhánh Hong Kong và Nhật Bản.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flutter Cross-platform</span>
+                                <span class="tech-tag">ASP.NET Core Web API</span>
+                                <span class="tech-tag">SQL Server</span>
+                                <span class="tech-tag">QR Code Scanner</span>
+                                <span class="tech-tag">i18n Multi-language</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 04 -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="assets/img/work4.jpg" alt="Engineering Design Change System">
+                            <span class="project-badge-top">Industrial Automation</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-company">Brother Vietnam (09/2024 - 12/2024)</div>
+                            <h3 class="project-title" data-i18n="p4_title">Hệ Thống Quản Lý Thay Đổi Thiết Kế Kỹ Thuật (WPF)</h3>
+                            <p class="project-desc" data-i18n="p4_desc">
+                                Hệ thống tự động hóa quy trình sửa đổi và phát hành bản vẽ thiết kế kỹ thuật phòng Kỹ thuật Bảo dưỡng Brother Vietnam. Tích hợp chữ ký số điện tử (e-Signature) bảo mật cao, mã QR định danh bản vẽ, chuẩn hóa luồng phê duyệt và khắc phục hoàn toàn điểm nghẽn của hệ thống legacy cũ.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">WPF (C#, XAML, MVVM)</span>
+                                <span class="tech-tag">SQL Server</span>
+                                <span class="tech-tag">Digital Signature (e-Sign)</span>
+                                <span class="tech-tag">QR Code Generator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== CERTIFICATIONS & AWARDS =====-->
+        <section class="section" id="certifications">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="tag_certs">Bảo chứng chuyên môn</span>
+                    <h2 class="section-title" data-i18n="certs_title">Chứng Chỉ & Giải Thưởng</h2>
+                    <p class="section-description" data-i18n="certs_desc">
+                        Quá trình liên tục nâng cấp chuyên môn kỹ thuật và những ghi nhận xuất sắc trong công việc.
+                    </p>
+                </div>
+
+                <div class="cert-grid">
+                    <!-- Award -->
+                    <div class="cert-card">
+                        <div class="cert-icon award"><i class='bx bx-trophy'></i></div>
+                        <div class="cert-info">
+                            <h4 data-i18n="award_title">Nhân Viên Tiêu Biểu Năm - Đạt Loại A+</h4>
+                            <div class="cert-meta">12/2024 • Brother Industrial Vietnam</div>
+                            <p data-i18n="award_desc">Đạt xếp loại A+ xuất sắc trong kỳ đánh giá nhân sự năm; khen thưởng Nhân viên tiêu biểu có đóng góp chuyển đổi số và phong trào công ty.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 1 -->
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class='bx bx-data'></i></div>
+                        <div class="cert-info">
+                            <h4>Performance Tuning and Optimizing SQL Databases</h4>
+                            <div class="cert-meta">02/2025 - 04/2025</div>
+                            <p data-i18n="cert1_desc">Chứng chỉ chuyên sâu về phân tích Execution Plan, tối ưu hóa chỉ mục (Indexing Strategy), Stored Procedures và tinh chỉnh hiệu năng hệ thống CSDL lớn.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class='bx bx-mobile'></i></div>
+                        <div class="cert-info">
+                            <h4>Cross Platform Application Programming - Flutter</h4>
+                            <div class="cert-meta">05/2025 - 07/2025</div>
+                            <p data-i18n="cert2_desc">Lập trình ứng dụng đa nền tảng Flutter chuyên nghiệp, State Management Riverpod, Custom Paint/Canvas và tối ưu hóa hiệu năng render UI.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class='bx bx-code-curly'></i></div>
+                        <div class="cert-info">
+                            <h4>Full Stack Web Programming - Java Web</h4>
+                            <div class="cert-meta">07/2022 - 02/2023</div>
+                            <p data-i18n="cert3_desc">Nền tảng kiến trúc hướng đối tượng (OOP), cấu trúc dữ liệu, MVC và lập trình hệ thống web chuyên nghiệp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="tag_contact">Kết nối</span>
+                    <h2 class="section-title" data-i18n="contact_title">Thông Tin Liên Hệ</h2>
+                    <p class="section-description" data-i18n="contact_desc">
+                        Sẵn sàng trao đổi về các cơ hội hợp tác, dự án công nghệ hoặc vị trí Senior Fullstack / Tech Lead.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: #fff;" data-i18n="contact_card_title">Liên Hệ Trực Tiếp</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="contact_card_desc">
+                            Tôi luôn sẵn sàng phản hồi nhanh chóng qua các kênh liên lạc dưới đây.
+                        </p>
+
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class='bx bx-map'></i></div>
+                                <div class="contact-info-text">
+                                    <div class="label" data-i18n="lbl_location">Địa Điểm</div>
+                                    <div class="value">Cầu Giấy / Nam Từ Liêm, Hà Nội, Việt Nam</div>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class='bx bx-phone'></i></div>
+                                <div class="contact-info-text">
+                                    <div class="label" data-i18n="lbl_phone">Điện Thoại / Zalo</div>
+                                    <div class="value"><a href="tel:0356239688" style="color:#60a5fa;">0356.239.688</a></div>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class='bx bx-envelope'></i></div>
+                                <div class="contact-info-text">
+                                    <div class="label">Email</div>
+                                    <div class="value"><a href="mailto:hieuvm.bo.01@gmail.com" style="color:#60a5fa;">hieuvm.bo.01@gmail.com</a></div>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class='bx bxl-linkedin'></i></div>
+                                <div class="contact-info-text">
+                                    <div class="label">LinkedIn</div>
+                                    <div class="value"><a href="https://www.linkedin.com/in/hieuvm688/" target="_blank" rel="noopener noreferrer" style="color:#60a5fa;">linkedin.com/in/hieuvm688</a></div>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class='bx bxl-github'></i></div>
+                                <div class="contact-info-text">
+                                    <div class="label">GitHub</div>
+                                    <div class="value"><a href="https://github.com/hieuvm688" target="_blank" rel="noopener noreferrer" style="color:#60a5fa;">github.com/hieuvm688</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <form class="contact-form" id="contact-form" onsubmit="event.preventDefault(); window.location.href = 'mailto:hieuvm.bo.01@gmail.com?subject=Contact%20from%20Portfolio&body=' + encodeURIComponent(document.getElementById('c-msg').value);">
+                            <div class="form-group">
+                                <label class="form-label" data-i18n="form_name">Họ và tên của bạn</label>
+                                <input type="text" class="form-control" id="c-name" required placeholder="Nguyễn Văn A">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-i18n="form_email">Email liên hệ</label>
+                                <input type="email" class="form-control" id="c-email" required placeholder="name@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-i18n="form_msg">Tin nhắn / Lời nhắn</label>
+                                <textarea class="form-control" id="c-msg" required placeholder="Nội dung cần trao đổi..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">
+                                <i class='bx bx-send'></i>
+                                <span data-i18n="btn_send_msg">Gửi Tin Nhắn</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">Vu Minh Hieu</div>
+            <div class="footer-subtitle" data-i18n="footer_subtitle">Fullstack Software Engineer (.NET 8 • Flutter • IoT Cloud)</div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/hieuvm688/" target="_blank" rel="noopener noreferrer" class="social-link"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/hieuvm688" target="_blank" rel="noopener noreferrer" class="social-link"><i class='bx bxl-github'></i></a>
+                <a href="mailto:hieuvm.bo.01@gmail.com" class="social-link"><i class='bx bx-envelope'></i></a>
+                <a href="tel:0356239688" class="social-link"><i class='bx bx-phone'></i></a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Vu Minh Hieu. All rights reserved. Designed with Enterprise Standards.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
